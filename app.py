@@ -101,7 +101,17 @@ demo = gr.Interface(
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 7860))
+
+    print("Starting Gradio app...")
+    print("PORT =", port)
+    print("MODEL EXISTS =", MODEL_PATH.exists())
+    print("DEVICE =", device)
+
+    demo.queue()
+
     demo.launch(
         server_name="0.0.0.0",
         server_port=port,
+        share=False,
+        show_error=True
     )
