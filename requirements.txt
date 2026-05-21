@@ -1,5 +1,5 @@
-torch
-torchvision
-gradio
+torch==2.5.1
+torchvision==0.20.1
+gradio==4.44.1
 pillow
 numpy
